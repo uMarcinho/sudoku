@@ -14,7 +14,6 @@ public class BoardGenerator {
         int[][] solvedBoard = generateSolvedBoard();
         int cellsToKeep = difficulty.getFixedCells();
         
-        // Remove células para criar o tabuleiro jogável
         for (int i = 0; i < 9; i++) {
             board.add(new ArrayList<>());
             for (int j = 0; j < 9; j++) {
@@ -28,7 +27,6 @@ public class BoardGenerator {
 
     private static int[][] generateSolvedBoard() {
         int[][] board = new int[9][9];
-        // Implementação simplificada - na prática use um algoritmo completo
         for (int i = 0; i < 9; i++) {
             for (int j = 0; j < 9; j++) {
                 board[i][j] = (i + j) % 9 + 1;
